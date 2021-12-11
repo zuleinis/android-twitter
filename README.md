@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src="app/simpletweet.gif" width=250><br>
+<img src="app/simpletwitter.gif" width=250><br>
 
 GIF created with [ezGif](https://ezgif.com/).
 
