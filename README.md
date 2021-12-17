@@ -2,7 +2,7 @@
 
 **SimpleTweet** is an android app that allows a user to view his Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: **4** hours spent in total
+Time spent: **7** hours spent in total
 
 ## User Stories
 
@@ -48,6 +48,8 @@ Here's a screenshot of implemented optional features:
 
 - I wanted to disable the tweet button when the input wasn't valid and at first it wasn't working but a TA helped me realize that I was attempting to do so in the wrong place.
 - Tried implementing the modal ComposeActivity and using Dialog was confusing because methods like "findViewById" require different formatting. 
+- Added logo to action bar but it wouldn't show on the compose view and ended up removing it for consistency.
+- Had to create some xml files that should've been there by default according to android's documentation. 
 
 ## Open-source libraries used
 
