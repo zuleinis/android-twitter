@@ -54,17 +54,17 @@ public class ComposeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String tweetContent = etCompose.getText().toString();
-                if (tweetContent.isEmpty()) {
-                    Toast.makeText(ComposeActivity.this, "Sorry, your tweet can't be empty.", Toast.LENGTH_LONG).show();
-                    return;
-                }
-
-                if (tweetContent.length() > MAX_TWEET_LENGTH) {
-                    Toast.makeText(ComposeActivity.this, "Sorry, your tweet is too long", Toast.LENGTH_LONG).show();
-                    return;
-                }
-
-                Toast.makeText(ComposeActivity.this, tweetContent, Toast.LENGTH_LONG).show();
+//                if (tweetContent.isEmpty()) {
+//                    Toast.makeText(ComposeActivity.this, "Sorry, your tweet can't be empty.", Toast.LENGTH_LONG).show();
+//                    return;
+//                }
+//
+//                if (tweetContent.length() > MAX_TWEET_LENGTH) {
+//                    Toast.makeText(ComposeActivity.this, "Sorry, your tweet is too long", Toast.LENGTH_LONG).show();
+//                    return;
+//                }
+//
+//                Toast.makeText(ComposeActivity.this, tweetContent, Toast.LENGTH_LONG).show();
                 // Make an API call to twitter to publish the tweet
 
                 client.publishTweet(tweetContent, new JsonHttpResponseHandler() {
@@ -92,6 +92,7 @@ public class ComposeActivity extends AppCompatActivity {
         });
 
         // Set text change listener on edit text view
+        btnTweet.setEnabled(false);
         etCompose.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -115,8 +116,7 @@ public class ComposeActivity extends AppCompatActivity {
 
                 // disable button if tweet is empty
                 String input = etCompose.getText().toString().trim();
-                // btnTweet.setEnabled(!input.isEmpty());
-                // btnTweet.setClickable(!input.isEmpty());
+                btnTweet.setEnabled(!input.isEmpty() && remaining >= 0);
             }
 
             @Override
