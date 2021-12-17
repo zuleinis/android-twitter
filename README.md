@@ -17,8 +17,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] User is using **"Twitter branded" colors and styles**
-- [ ] User can click links in tweets launch the web browser 
+- [X] User is using **"Twitter branded" colors and styles**
+- [X] User can click links in tweets launch the web browser 
 - [ ] User can **select "reply" from detail view to respond to a tweet**
 - [ ] The "Compose" action is moved to a FloatingActionButton instead of on the AppBar
 - [ ] Compose tweet functionality is build using modal overlay
@@ -38,6 +38,11 @@ Here's a walkthrough of implemented user stories:
 <img src="app/tweet.gif" width=250><br>
 
 GIF created with [ezGif](https://ezgif.com/).
+
+Here's a screenshot of implemented optional features:
+(Walkthrough will be updated soon)
+
+<img src="app/stretch.png" width=250><br>
 
 ## Notes
 
